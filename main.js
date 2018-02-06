@@ -63,4 +63,9 @@ Z2MCoin.addBlock(new Block(2, "02/03/2018", { amount: 10}));
 
 console.log('is blockchain valid?' + Z2MCoin.isChainValid());
 
+Z2MCoin.chain[1].data = { amount: 100};
+Z2MCoin.chain[1].hash = Z2MCoin.chain[1].calculateHash();
+
+console.log('is blockchain valid?' + Z2MCoin.isChainValid());
+
 // console.log(JSON.stringify(Z2MCoin, null, 4));
