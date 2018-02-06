@@ -36,6 +36,23 @@ class Blockchain{
     }
 }
 
+isChainValid(){
+    for(let i = 1; 1 < this.chain.length; i++){
+        const currentBlock = this.chain[1];
+        const previousBlock = this.chain[i - 1];
+
+        if(currentBlock.has !== currentBlock.calculateHash()){
+            return false;
+        }
+        if(currentBlock.previousHash !== previousBlock.hash){
+            return flase;
+        }
+    }
+
+    return true;
+}
+
+
 let Z2MCoin = new Blockchain();
 Z2MCoin.addBlock(new Block(1, "02/02/2018", { amount: 4}));
 Z2MCoin.addBlock(new Block(2, "02/03/2018", { amount: 10}));
