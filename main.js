@@ -20,4 +20,34 @@ var generateNextBlock = (blockData) => {
     return new Block(nextIndex, previousBlock.hash, nextTimestamp, blockData, nextHash);
 };
 
-var getGenesisBlock = () => {}
+
+var getGenesisBlock = () => {
+    return new Block(0, "0", 1465154705, "Genesis", "816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7");
+};
+
+var blockchain = [getGenesisBlock()];
+
+var isValidNewBlock = (newBlock, previousBlock) => {
+    if (previousBlock.index + 1 !== newBlock.index) {
+        console.log('invalid index');
+        return false;
+    } else if (previousBlock.hash !== newBlock.previousHash) {
+        console.log('invalid previoushash');
+        return false;
+    } else if (calculateHashForBlock(newBlock) !== newBlock.hash) {
+        console.log('invalid hash: ' + calculateHashForBlock(newBlock) + ' ' + newBlock.hash);
+        return false;
+    }
+    return true;
+};
+
+
+var replaceChain = (newBlocks) => {
+    if (isValidChain(newBlocks) && newBlocks.length > blockchain.length) {
+        console.log('Received blockchain is valid. Replacing current blockchain with received blockchain');
+        blockchain = newBlocks;
+        broadcast(responseLatestMsg());
+    } else {
+        console.log('Received blockchain invalid');
+    }
+};
