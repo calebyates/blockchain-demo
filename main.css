@@ -2,7 +2,7 @@ body {
 	width: 100wh;
 	height: 90vh;
 	color: #fff;
-	background: linear-gradient(-40deg, #FF9800, #ffffff,#ffedd1, #ffffff, #FF9800);
+	background: linear-gradient(-40deg, #0cc898, #1797d2, #e14f73);
 	background-size: 400% 400%;
 	-webkit-animation: Gradient 20s ease infinite;
 	-moz-animation: Gradient 20s ease infinite;
@@ -43,4 +43,14 @@ body {
 	100% {
 		background-position: 0% 50%
 	}
+}
+
+h1 {
+	color: #fff;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 800;
+	font-size: 4em;
+	letter-spacing: -2px;
+	text-align: center;
+	text-shadow: 1px 2px 1px rgba(0, 0, 0, .6);
 }
