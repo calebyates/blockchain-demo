@@ -18,29 +18,38 @@
 </head>
 
 <body>
-
   <div class="container">
-      <h1>Z2M Blockchain Generator</h1>
-      <div class="form-group label-floating has-success">
-              <input type="text" class="form-control" id="inputField" placeholder="Enter the data..." />
-        <span class="form-control-feedback">
-        </span>
-      </div>
-      <button class="btn btn-success btn-round" id="inputData">
-         Generate <i class="material-icons">vpn_key</i>
-      </button>
-      <button class="btn btn-warning btn-round" id="Restart">
-         Reset <i class="material-icons">error_outline</i>
-      </button>
-      <div id="outputField"></div>
-      <div id="footer">
-      </div>
+    <h1>BLOCKCHAIN</h1>
+    <p>This is simple blockchain generator. As you click "generate" it will create the genesis block and then then add the first block to the blockchain. Press reset to, well, reset. <br> 
+      This is super simple and will be expanded on over time.</p>
+    <div class="form-group label-floating has-success">
+      <input type="text" class="form-control" id="inputField" placeholder="Enter data..." />
+      <span class="form-control-feedback">
+      </span>
     </div>
+    <button class="btn btn-success btn-round" id="inputData">
+      Generate
+      <i class="material-icons">vpn_key</i>
+    </button>
+    <button class="btn btn-warning btn-round" id="Restart">
+      Reset
+      <i class="material-icons">error_outline</i>
+    </button>
+    <div id="outputField"></div>
+  </div>
+<footer>
+    <nav class="navbar fixed-bottom navbar-transparent bg-primary">
+        <div class="container">
+            <a href="https://github.com/calebyates" target="_blank" class="nav-link">
+                <i class="material-icons">account_circle</i>
+                Caleb Yates
+            </a>
+        </div>
+      </nav>
+</footer>
 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.5.0/sha256.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.5.0/sha256.min.js"></script>
   <!--   Core JS Files   -->
   <script src="main.js"></script>
   <script src="/assets/js/core/jquery.min.js"></script>

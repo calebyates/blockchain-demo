@@ -2,7 +2,7 @@ body {
 	width: 100wh;
 	height: 90vh;
 	color: #fff;
-	background: linear-gradient(-40deg, #0cc898, #1797d2, #e14f73);
+	background: linear-gradient(-40deg, #0cc899, #1797d2, #ff4242);
 	background-size: 400% 400%;
 	-webkit-animation: Gradient 20s ease infinite;
 	-moz-animation: Gradient 20s ease infinite;
@@ -46,34 +46,33 @@ body {
 }
 
 h1 {
-	color: #ffffffcc;
+	color: #ffffffec;
 	font-family: 'Open Sans', sans-serif;
-	font-weight: 800;
+	font-weight: 500;
 	font-size: 3.5em;
 	text-align: center;
-	text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.123);
+	text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.185);
 }
 
-span1 {
-	text-align: center;
-	color: red;
+span3{
+	color: rgb(255, 255, 255);
 	font-weight: bold;
 }
-span2 {
-	text-align: center;
-	color: red;
-	font-weight: bold;
+
+span5{
+	color: rgba(255, 255, 255, 0.589)
 }
-span3 {
-	text-align: center;
-	color: red;
-	font-weight: bold;
+
+.form-control{
+	color: #ffffff;
 }
-span4 {
-	text-align: center;
-	font-weight: bold;
+
+.form-control:focus {
+	color: #ffffff;
 }
-span5 {
-	text-align: center;
-	font-weight: bold;
+.has-success .form-control, .is-focused .has-success .form-control {
+	background-image: linear-gradient(to top, #ffffff 2px, rgba(76, 175, 80, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
+}
+a{
+	color: #ffffff;
 }
