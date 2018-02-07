@@ -5,18 +5,17 @@ $(document).ready(function(){
   let genesis = false;
     
   class Block{
-    constructor(index, timestamp, data, previousHash){
-      this.index = "<span1>" + index + "</span1>";
-      this.timestamp = timestamp;
-      this.data = data;
-      this.previousHash = previousHash ;
-      this.hash = "<span2>" + this.calculateHash() + "</span2>";
+    constructor(Index, Timestamp, Data, Previous){
+      this.Index = "<span1>" + Index + "</span1>";
+      this.Timestamp = `<span2>` + Timestamp + `</span2>`;
+      this.Data =`<span3>`+ Data + `</span3>` ;
+      this.Previous = `<span4>`+ Previous + `</span4>`;
+      this.Hash = "<span5>" + this.calculateHash() + "</span5>";
     }
     
     calculateHash(){
-      return  sha256(this.index + this.timestamp + JSON.stringify(this.data)).toString();
+      return  sha256(this.Index + this.Timestamp + JSON.stringify(this.Data)).toString();
     }
-    
   }
     
     class BlockChain{
@@ -32,8 +31,8 @@ $(document).ready(function(){
       }
       
       addBlock(newBlock){
-        newBlock.previousHash ="<span2>" + this.getLast().hash + "</span2>";
-        newBlock.hash = newBlock.calculateHash() ;
+        newBlock.Previous ="<span5>" + this.getLast().Hash + "</span5>";
+        newBlock.Hash = newBlock.calculateHash() ;
         this.chain.push(newBlock);
         console.log(this.chain);
       }
