@@ -42,7 +42,7 @@ $(document).ready(function(){
     let coin = new BlockChain();
     
     function addNew(){
-      const inputData = $("#searchField").val();
+      const inputData = $("inputField").val();
       let time = new Date();
       i++;
       coin.addBlock(new Block(i, time.toLocaleString(), inputData));
@@ -76,7 +76,7 @@ $(document).ready(function(){
         num++;
       }  
     });
-      $("#searchField").val('');
+      $("inputField").val('');
     });
     
     
@@ -84,7 +84,7 @@ $(document).ready(function(){
       genesis = false;
       i = 0;
       coin.chain = [coin.genesisBlock()];
-      $("#searchField").val('');
+      $("inputField").val('');
       $("#outputField").html('');
       num = 0;
     });
